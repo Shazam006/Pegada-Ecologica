@@ -64,7 +64,7 @@
       <div class="question">
         <h3>2. Você evita usar descartáveis (copos, pratos, talheres) no seu dia a dia?</h3>
         <label><input type="radio" name="q1" value="0" required>  Uso sempre</label>
-        <label><input type="radio" name="q1" value="1"> 🛍️ Uso só em algumas ocasiões</label>
+        <label><input type="radio" name="q1" value="1">  Uso só em algumas ocasiões</label>
         <label><input type="radio" name="q1" value="2"> 🍽️ Evito ao máximo</label>
       </div>
       <div class="question">
@@ -148,10 +148,10 @@
       let resultTitle = '';
       let resultText = '';
 
-      if (total >= 20) {
+      if (total >= 15) {
         resultTitle = "🌱 Você é Econômico!";
         resultText = "Parabéns! Seus hábitos demonstram grande consciência ambiental.";
-      } else if (total >= 15) {
+      } else if (total >= 10) {
         resultTitle = "🌿 Pouco, mas chega lá!";
         resultText = "Você já faz sua parte, mas pode melhorar em alguns aspectos.";
       } else {
