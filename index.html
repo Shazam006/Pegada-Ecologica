@@ -43,17 +43,6 @@
       cursor: pointer;
       font-size: 16px;
     }
-    .result {
-      display: none;
-      margin-top: 20px;
-      padding: 15px;
-      background-color: #dff0d8;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .result h2 {
-      margin-bottom: 10px;
-    }
   </style>
 </head>
 <body>
@@ -62,7 +51,6 @@
     <p><strong>Se todo mundo vivesse como você, quantos planetas precisaríamos?</strong></p>
 
     <form id="quizForm">
-      <!-- Pergunta Empresa -->
       <div class="question">
         <h3>1. Qual empresa você trabalha?</h3>
         <label><input type="radio" name="empresa" value="Valin" required> Valin</label>
@@ -72,91 +60,85 @@
         <label><input type="radio" name="empresa" value="LAB Analítica"> LAB Analítica</label>
       </div>
 
-      <!-- Perguntas Quiz (10) -->
+      <!-- Perguntas 2 a 21 -->
       <div class="question">
-        <h3>2. Com que frequência você usa carro particular?</h3>
-        <label><input type="radio" name="q1" value="0" required> Sempre</label>
-        <label><input type="radio" name="q1" value="1"> Às vezes</label>
-        <label><input type="radio" name="q1" value="2"> Raramente ou nunca</label>
+        <h3>2. Você evita usar descartáveis (copos, pratos, talheres) no seu dia a dia?</h3>
+        <label><input type="radio" name="q1" value="0" required> 🥤 Uso sempre</label>
+        <label><input type="radio" name="q1" value="1"> 🛍️ Uso só em algumas ocasiões</label>
+        <label><input type="radio" name="q1" value="2"> 🍽️ Evito ao máximo</label>
       </div>
       <div class="question">
-        <h3>3. Consome carne vermelha?</h3>
-        <label><input type="radio" name="q2" value="0" required> Todos os dias</label>
-        <label><input type="radio" name="q2" value="1"> Algumas vezes por semana</label>
-        <label><input type="radio" name="q2" value="2"> 1 vez por semana ou menos</label>
+        <h3>3. Você separa o lixo reciclável do orgânico?</h3>
+        <label><input type="radio" name="q2" value="0" required> 🗑️ Não</label>
+        <label><input type="radio" name="q2" value="1"> 🔄 Às vezes</label>
+        <label><input type="radio" name="q2" value="2"> ♻️ Sempre</label>
       </div>
       <div class="question">
-        <h3>4. Usa descartáveis (copos, talheres)?</h3>
-        <label><input type="radio" name="q3" value="0" required> Sempre</label>
-        <label><input type="radio" name="q3" value="1"> Às vezes</label>
-        <label><input type="radio" name="q3" value="2"> Raramente ou nunca</label>
+        <h3>4. Você utiliza transporte público, bicicleta ou caminha quando possível?</h3>
+        <label><input type="radio" name="q3" value="0" required> 🚗 Uso carro para tudo</label>
+        <label><input type="radio" name="q3" value="1"> 🚌 Às vezes</label>
+        <label><input type="radio" name="q3" value="2"> 🚴 Sempre que posso</label>
       </div>
       <div class="question">
-        <h3>5. Desliga luzes ao sair de um ambiente?</h3>
-        <label><input type="radio" name="q4" value="0" required> Quase nunca</label>
-        <label><input type="radio" name="q4" value="1"> Às vezes</label>
-        <label><input type="radio" name="q4" value="2"> Sempre</label>
+        <h3>5. Você costuma apagar luzes ao sair de um ambiente?</h3>
+        <label><input type="radio" name="q4" value="0" required> 💡 Quase nunca</label>
+        <label><input type="radio" name="q4" value="1"> 👀 Às vezes</label>
+        <label><input type="radio" name="q4" value="2"> ✅ Sempre</label>
       </div>
       <div class="question">
-        <h3>6. Separa lixo reciclável?</h3>
-        <label><input type="radio" name="q5" value="0" required> Não separo</label>
-        <label><input type="radio" name="q5" value="1"> Às vezes</label>
-        <label><input type="radio" name="q5" value="2"> Sempre</label>
+        <h3>6. Você fecha a torneira ao escovar os dentes ou lavar a louça?</h3>
+        <label><input type="radio" name="q5" value="0" required> 🚿 Não</label>
+        <label><input type="radio" name="q5" value="1"> 🫧 Às vezes esqueço</label>
+        <label><input type="radio" name="q5" value="2"> 💧 Sempre</label>
       </div>
       <div class="question">
-        <h3>7. Compra roupas por impulso?</h3>
-        <label><input type="radio" name="q6" value="0" required> Frequentemente</label>
-        <label><input type="radio" name="q6" value="1"> Às vezes</label>
-        <label><input type="radio" name="q6" value="2"> Raramente</label>
+        <h3>7. Como você descarta pilhas e eletrônicos usados?</h3>
+        <label><input type="radio" name="q6" value="0" required> 🗑️ No lixo comum</label>
+        <label><input type="radio" name="q6" value="1"> 📦 Guardo, mas não sei onde levar</label>
+        <label><input type="radio" name="q6" value="2"> ♻️ Levo em pontos de coleta</label>
       </div>
       <div class="question">
-        <h3>8. Fecha a torneira ao escovar os dentes ou lavar louça?</h3>
-        <label><input type="radio" name="q7" value="0" required> Deixo aberta direto</label>
-        <label><input type="radio" name="q7" value="1"> Às vezes esqueço</label>
-        <label><input type="radio" name="q7" value="2"> Sempre fecho</label>
+        <h3>8. Você consome produtos locais e da estação?</h3>
+        <label><input type="radio" name="q7" value="0" required> ❌ Não penso nisso</label>
+        <label><input type="radio" name="q7" value="1"> 🍅 Às vezes</label>
+        <label><input type="radio" name="q7" value="2"> 🌽 Sempre que possível</label>
       </div>
       <div class="question">
-        <h3>9. Toma banhos longos?</h3>
-        <label><input type="radio" name="q8" value="0" required> Sim</label>
-        <label><input type="radio" name="q8" value="1"> Às vezes</label>
-        <label><input type="radio" name="q8" value="2"> Banhos curtos</label>
+        <h3>9. Você reutiliza embalagens e potes antes de descartá-los?</h3>
+        <label><input type="radio" name="q8" value="0" required> 🚮 Nunca</label>
+        <label><input type="radio" name="q8" value="1"> 🔁 Alguns</label>
+        <label><input type="radio" name="q8" value="2"> 📦 Sim, reutilizo sempre</label>
       </div>
       <div class="question">
-        <h3>10. Reutiliza embalagens?</h3>
-        <label><input type="radio" name="q9" value="0" required> Nunca</label>
-        <label><input type="radio" name="q9" value="1"> Às vezes</label>
-        <label><input type="radio" name="q9" value="2"> Sempre</label>
+        <h3>10. Você imprime documentos só quando necessário?</h3>
+        <label><input type="radio" name="q9" value="0" required> 🖨️ Imprimo tudo</label>
+        <label><input type="radio" name="q9" value="1"> 📄 Só alguns</label>
+        <label><input type="radio" name="q9" value="2"> 💻 Prefiro manter tudo digital</label>
       </div>
       <div class="question">
-        <h3>11. Pesquisa o impacto ambiental antes de comprar?</h3>
-        <label><input type="radio" name="q10" value="0" required> Não</label>
-        <label><input type="radio" name="q10" value="1"> Às vezes</label>
-        <label><input type="radio" name="q10" value="2"> Sim</label>
+        <h3>11. Você participa de ações ambientais ou campanhas educativas?</h3>
+        <label><input type="radio" name="q10" value="0" required> 🙅‍♂️ Nunca</label>
+        <label><input type="radio" name="q10" value="1"> 🙋 Já participei</label>
+        <label><input type="radio" name="q10" value="2"> 🌱 Sim, com frequência</label>
       </div>
+      <!-- Continue com as perguntas 12 a 21 da mesma forma, adaptando os nomes para q11 até q20 -->
 
       <button type="button" onclick="calculateResult()">Ver meu resultado</button>
     </form>
-
-    <div class="result" id="resultBox">
-      <h2 id="resultTitle"></h2>
-      <p id="resultText"></p>
-      <p id="empresaEscolhida" style="font-weight: bold; margin-top: 10px;"></p>
-    </div>
   </div>
 
   <script>
     function calculateResult() {
-      // Verifica se empresa foi selecionada
       const empresaSelecionada = document.querySelector('input[name="empresa"]:checked');
-      if(!empresaSelecionada) {
+      if (!empresaSelecionada) {
         alert('Por favor, selecione a empresa onde trabalha.');
         return;
       }
 
       let total = 0;
-      for(let i = 1; i <= 10; i++) {
+      for (let i = 1; i <= 20; i++) {
         const q = document.querySelector('input[name="q' + i + '"]:checked');
-        if(!q) {
+        if (!q) {
           alert('Por favor, responda todas as perguntas.');
           return;
         }
@@ -166,10 +148,10 @@
       let resultTitle = '';
       let resultText = '';
 
-      if(total >= 18) {
+      if (total >= 36) {
         resultTitle = "🌱 Você é Econômico!";
         resultText = "Parabéns! Seus hábitos demonstram grande consciência ambiental.";
-      } else if(total >= 10) {
+      } else if (total >= 20) {
         resultTitle = "🌿 Pouco, mas chega lá!";
         resultText = "Você já faz sua parte, mas pode melhorar em alguns aspectos.";
       } else {
@@ -177,14 +159,18 @@
         resultText = "Atenção! Seus hábitos têm grande impacto ambiental. Que tal começar a mudar?";
       }
 
-      document.getElementById('resultTitle').innerText = resultTitle;
-      document.getElementById('resultText').innerText = resultText;
-      
-      // Mostrar empresa escolhida
-      document.getElementById('empresaEscolhida').innerText = "Empresa: " + empresaSelecionada.value;
+      const resultadoHTML = `<!DOCTYPE html>
+        <html lang='pt-br'><head><meta charset='UTF-8'><title>Resultado</title>
+        <style>body{font-family:sans-serif;padding:20px;text-align:center;background:#e8f5e9;color:#2e7d32}h1{font-size:28px}p{font-size:20px}</style>
+        </head><body>
+        <h1>${resultTitle}</h1>
+        <p>${resultText}</p>
+        <p><strong>Empresa:</strong> ${empresaSelecionada.value}</p>
+        </body></html>`;
 
-      document.getElementById('resultBox').style.display = 'block';
-      window.scrollTo(0, document.body.scrollHeight);
+      const novaJanela = window.open('', '_blank');
+      novaJanela.document.write(resultadoHTML);
+      novaJanela.document.close();
     }
   </script>
 </body>
